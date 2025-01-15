@@ -48,4 +48,6 @@ sed -i "s/2023\/12\/26 A styling package for the class: /$(date +"%Y\/%m\/%d") A
 mv src/styles/tex/latex/academics "src/styles/tex/latex/$LOWER_ABBR"
 mv "src/styles/tex/latex/$LOWER_ABBR/academics.sty" "src/styles/tex/latex/$LOWER_ABBR/$LOWER_ABBR.sty"
 
-rm personalize.sh
+git add .idea/IITAcademics.iml .idea/modules.xml src/styles/tex/latex/academics/academics.sty src/styles/tex/latex/iitacademics .idea/.name src/styles/tex/latex/$LOWER_ABBR/ ".idea/$TITLE.iml"
+git rm personalize.sh
+git commit -m "Personalized $TITLE repo."
