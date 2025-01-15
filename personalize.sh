@@ -10,7 +10,7 @@ elif [ $# -eq 1 ]; then
 	fi
 fi
 
-if [ ! -f src/styles/tex/latex/iitacademics/academics.sty ]; then
+if [ ! -f src/styles/tex/latex/iitacademics/iitacademics.sty ]; then
     git submodule init
     git submodule update --remote
 fi
@@ -47,3 +47,5 @@ sed -i "s/2023\/12\/26 A styling package for the class: /$(date +"%Y\/%m\/%d") A
 
 mv src/styles/tex/latex/academics "src/styles/tex/latex/$LOWER_ABBR"
 mv "src/styles/tex/latex/$LOWER_ABBR/academics.sty" "src/styles/tex/latex/$LOWER_ABBR/$LOWER_ABBR.sty"
+
+rm personalize.sh
